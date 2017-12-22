@@ -49,7 +49,7 @@ hbs.registerHelper('screamIt', (text) => {
 app.get('/', (req, res) => {
   res.render('home.hbs', {
     pageTitle: 'Home Page',
-    welcomeMessage: 'Welcome to the home page!',
+    welcomeMessage: 'Welcome to the Home Page!',
     //currentYear: new Date().getFullYear()
   })
 });
@@ -57,6 +57,14 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page',
+    //currentYear: new Date().getFullYear()
+  })
+});
+
+app.get('/', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    welcomeMessage: 'Welcome to My Projects!',
     //currentYear: new Date().getFullYear()
   })
 });
