@@ -2,6 +2,9 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+//This code allows Heroku to set the port or defualt to 8080 is running locally
+//This is necessary for Heroku to operate correctly
+const port = process.env.PORT || 8080;
 var app = express();
 
 //This lets handlebars know we want to add support for partials
@@ -64,6 +67,6 @@ app.get('/about', (req, res) => {
 //   });
 // });
 
-app.listen(8080, () => {
-  console.log('Server is up on port 8080')
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
